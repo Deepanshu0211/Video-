@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+
+
+body{
+   
+    background: linear-gradient(45deg, #76f0d7, #d2e775, #8654e2, #6ac581, rgb(133, 82, 228), #cc46e0, #a31d33);
+  background-size: 200% 200%;
+  animation: gradientAnimation 17s ease-in-out infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+#join-btn{
+    position: fixed;
+    top:50%;
+    font-family: 'Source Code Pro', monospace;
+    left:50%;
+    border-radius: 20%;
+    background: linear-gradient(45deg, #0f1410, rgb(65, 64, 66), #3b2c3d, #77696b);
+    margin-top:-50px;
+    margin-left:-100px;
+    font-size:18px;
+    border: solid 2px #dde4eb;
+    padding:20px 40px;
+    transition: 0.7s;
+}
+#join-btn:hover{
+    transition: 0.7s;
+    border-color: #203A49;
+    font-family: 'Source Code Pro', monospace;
+    background: linear-gradient(45deg, #c9ceca, rgb(185, 178, 192), #a17ba7, #bd858d);
+    transition : 1009ms;
+   
+    
+   
+    color: #11110e;
+    border: solid 2px #0f0b0d;
+    
+}
+#video-streams{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    height: 90vh;
+    width: 100px;
+    column-gap: 50px;
+    row-gap: 50px;
+    margin:0 auto;
+}
+
+.video-container{
+    max-height: 100%;
+    display:grid;
+    border: 2px solid rgb(192, 159, 159);
+    background-color: #1b5272;
+}
+
+.video-player{
+    height: 100%;
+    width: 100%;
+}
+
+
+button{
+    border:none;
+    background-color: #04151a;
+    color:#fff;
+    padding:10px 20px;
+    font-size:16px;
+    margin:2px;
+    cursor: pointer;
+    transition: 0.7s;
+    border-radius: 25%;
+}
+button:hover{
+    border: solid 2px rgb(0, 0, 0);
+    transition: 0.7s;
+    border-radius: 10%;
+    box-shadow: 3px -5px rgb(243, 239, 239);
+   
+}
+#stream-controls{
+    display: none;
+    justify-content: center;
+    margin-top:0.5em;
+}
+
+@media screen and (max-width:1400px){
+    #video-streams{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        width: 95%;
+    }
+}
